@@ -35,10 +35,10 @@ export default async function InvoicesTable({ query, currentPage }: { query: str
                     <p className="text-xl font-medium">{formatCurrency(invoice.amount)}</p>
                     <p>{formatDateToLocal(invoice.date)}</p>
                   </div>
-                  <td className="flex justify-end gap-2 whitespace-nowrap px-6 py-4 text-sm">
+                  <div className="flex justify-end gap-2 whitespace-nowrap px-6 py-4 text-sm">
                     <UpdateInvoice id={invoice.id} />
                     <DeleteInvoice id={invoice.id} />
-                  </td>
+                  </div>
                 </div>
               </div>
             ))}
